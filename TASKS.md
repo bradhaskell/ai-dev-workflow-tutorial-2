@@ -53,5 +53,5 @@ The following must be true before any milestone moves to Done:
   - [x] Data calculations are isolated in a separate module with pytest coverage
   - [x] The test suite passes without errors
   - [x] The complete dashboard meets the PRD acceptance criteria and has a professional presentation
-  - Commit: e82e60f
-  - Notes: Added project memory and strengthened missing-column validation after runtime review; local smoke test returned HTTP 200 with clean startup output.
+  - Commit: 263d69a
+  - Notes: Added project memory, strengthened data validation, rejected invalid numeric values, and cached validated data; local smoke test returned HTTP 200 with clean startup output.
