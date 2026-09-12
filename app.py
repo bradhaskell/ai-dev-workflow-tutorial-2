@@ -16,12 +16,19 @@ from data_processing import (
 
 DATA_PATH = Path(__file__).parent / "data" / "sales-data.csv"
 
+
+@st.cache_data
+def get_sales_data(path: str | Path):
+    """Cache the validated source data between Streamlit reruns."""
+    return load_sales_data(path)
+
+
 st.set_page_config(page_title="ShopSmart Sales Dashboard", page_icon="📊", layout="wide")
 st.title("ShopSmart Sales Dashboard")
 st.caption("Executive view of e-commerce sales performance")
 
 try:
-    sales_data = load_sales_data(DATA_PATH)
+    sales_data = get_sales_data(DATA_PATH)
 except (FileNotFoundError, OSError, ValueError) as error:
     st.error(f"Sales data could not be loaded: {error}")
     st.stop()
