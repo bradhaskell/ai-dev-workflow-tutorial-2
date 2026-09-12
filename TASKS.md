@@ -54,5 +54,5 @@ The following must be true before any milestone moves to Done:
   - [x] The completed dashboard is deployed from the merged `main` branch
   - [x] The public Streamlit URL loads without errors
   - [x] The live URL is recorded in this file and near the top of `README.md`
-  - Commit:
+  - Commit: 82e2d2c
   - Notes: Deployed from the merged `main` branch to Streamlit Community Cloud at https://ai-dev-workflow-tutorial-2-qkuvthm5nljvkg9ojsxk73.streamlit.app/. Verified in a private/incognito browser window: the dashboard loads with the ShopSmart title, Total Sales and Total Orders KPIs, the monthly sales trend chart, and the category and region breakdowns, with no errors.
