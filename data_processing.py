@@ -25,7 +25,9 @@ def validate_sales_data(dataframe: pd.DataFrame) -> None:
     if dataframe.empty:
         raise ValueError("The sales data file contains no records")
 
-    required_values = dataframe[["date", "order_id", "category", "region", "total_amount"]]
+    required_values = dataframe[
+        ["date", "order_id", "product", "category", "region", "quantity", "unit_price", "total_amount"]
+    ]
     if required_values.isna().any().any():
         raise ValueError("The sales data contains missing required values")
 

@@ -43,6 +43,18 @@ def test_load_sales_data_rejects_missing_required_columns(tmp_path: Path):
         load_sales_data(csv_path)
 
 
+def test_load_sales_data_rejects_invalid_numeric_values(tmp_path: Path):
+    csv_path = tmp_path / "invalid-number.csv"
+    csv_path.write_text(
+        "date,order_id,product,category,region,quantity,unit_price,total_amount\n"
+        "2024-01-15,ORD-1,Headphones,Audio,North,not-a-number,25.00,50.00\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="missing required values"):
+        load_sales_data(csv_path)
+
+
 def test_calculate_total_sales_sums_transaction_amounts():
     data = pd.DataFrame({"total_amount": [10.50, 20.25, 5.25]})
 
