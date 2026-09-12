@@ -13,12 +13,6 @@ The following must be true before any milestone moves to Done:
 
 ## To Do
 
-- [ ] **TASK-6: Deployment to Streamlit Community Cloud**
-  - [ ] The completed dashboard is deployed from the merged `main` branch
-  - [ ] The public Streamlit URL loads without errors
-  - [ ] The live URL is recorded in this file and near the top of `README.md`
-  - Commit:
-
 ## In Progress
 
 ## Done
@@ -55,3 +49,10 @@ The following must be true before any milestone moves to Done:
   - [x] The complete dashboard meets the PRD acceptance criteria and has a professional presentation
   - Commit: 263d69a
   - Notes: Added project memory, strengthened data validation, rejected invalid numeric values, and cached validated data; local smoke test returned HTTP 200 with clean startup output.
+
+- [x] **TASK-6: Deployment to Streamlit Community Cloud**
+  - [x] The completed dashboard is deployed from the merged `main` branch
+  - [x] The public Streamlit URL loads without errors
+  - [x] The live URL is recorded in this file and near the top of `README.md`
+  - Commit:
+  - Notes: Deployed from the merged `main` branch to Streamlit Community Cloud at https://ai-dev-workflow-tutorial-2-qkuvthm5nljvkg9ojsxk73.streamlit.app/. Verified in a private/incognito browser window: the dashboard loads with the ShopSmart title, Total Sales and Total Orders KPIs, the monthly sales trend chart, and the category and region breakdowns, with no errors.
