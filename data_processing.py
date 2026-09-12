@@ -31,7 +31,11 @@ def validate_sales_data(dataframe: pd.DataFrame) -> None:
     if required_values.isna().any().any():
         raise ValueError("The sales data contains missing required values")
 
-    if (dataframe["total_amount"] < 0).any() or (dataframe["quantity"] < 0).any():
+    if (
+        (dataframe["quantity"] < 0).any()
+        or (dataframe["unit_price"] < 0).any()
+        or (dataframe["total_amount"] < 0).any()
+    ):
         raise ValueError("The sales data contains negative values")
 
 
